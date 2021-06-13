@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker/common_widgets/custom_elevated_button.dart';
 import 'package:time_tracker/screens/sign_in_button.dart';
+import 'package:time_tracker/screens/social_sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -33,94 +34,32 @@ class SignInPage extends StatelessWidget {
             SizedBox(
               height: 48.0,
             ),
-            CustomElevatedButton(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Image.asset(
-                    "images/googlelogo.png",
-                  ),
-                  Text(
-                    "Sign in with Google",
-                    style: TextStyle(
-                      color: Colors.black87,
-                      fontSize: 15.0,
-                    ),
-                  ),
-                  Opacity(
-                    opacity: 0.0,
-                    child: Image.asset(
-                      "images/googlelogo.png",
-                    ),
-                  ),
-                ],
-              ),
+            SocialSignInButton(
+              assetName: "images/googlelogo.png",
+              text: 'Sign in with Google',
               color: Colors.white,
-              borderRadius: 4.0,
+              textColor: Colors.black87,
               onPressed: () {},
-              height: 40.0,
             ),
             SizedBox(
               height: 8.0,
             ),
-            CustomElevatedButton(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Image.asset(
-                    "images/facebooklogo.png",
-                  ),
-                  Text(
-                    "Sign in with Facebook",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15.0,
-                    ),
-                  ),
-                  Opacity(
-                    opacity: 0.0,
-                    child: Image.asset(
-                      "images/facebooklogo.png",
-                    ),
-                  ),
-                ],
-              ),
+            SocialSignInButton(
+              assetName: "images/facebooklogo.png",
+              text: 'Sign in with Facebook',
               color: Color(0xFF334D92),
-              borderRadius: 4.0,
+              textColor: Colors.white,
               onPressed: () {},
-              height: 40.0,
             ),
             SizedBox(
               height: 8.0,
             ),
-            CustomElevatedButton(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Icon(
-                    Icons.mail,
-                    size: 32.5,
-                  ),
-                  Text(
-                    "Sign in with Email",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15.0,
-                    ),
-                  ),
-                  Opacity(
-                    opacity: 0.0,
-                    child: Icon(
-                      Icons.mail,
-                      size: 32.5,
-                    ),
-                  ),
-                ],
-              ),
+            SocialSignInButton(
+              assetName: "images/mail.png",
+              text: 'Sign in with Email',
               color: Colors.teal.shade700,
-              borderRadius: 4.0,
+              textColor: Colors.white,
               onPressed: () {},
-              height: 40.0,
             ),
             SizedBox(
               height: 8.0,
